@@ -1,0 +1,11 @@
+  
+#!/usr/bin/env bash
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
+
+cd "$BUILD_DIR"
+
+git config --global url."https://${GITHUB_USER}:${GITHUB_AUTH_TOKEN}@github.com/".insteadOf "https://github.com/"
+echo "Using github user: ${GITHUB_USER}"
